@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>footprintcalculate</title>
+<link rel = "stylesheet" href="css/style.css">
+<script type= "text/javascript">
+
+
+function googlesearch()
+{
+var NumberofSearches= parseFloat(document.myForm.NumberofSearches.value);
+var result1= 0.2*NumberofSearches;
+
+var MegaBytes= parseInt(document.myForm.MegaBytes.value);
+var result2= 20*MegaBytes;
+
+var Spams= parseFloat(document.myForm.Spams.value);
+var result3= 0.3*Spams;
+
+var Emails= parseFloat(document.myForm.Emails.value);
+var result4= 4*Emails;
+
+var Emails2= parseFloat(document.myForm.Emails2.value);
+var result5= 50*Emails2;
+
+
+var Total= result1+result2+result3+result4+result5;
+document.getElementById("Result").innerHTML= "Total Carbon Released: " +Total+"grams";
+return false;
+}
+</script>
+</head>
+<body text="black">
+	<header>
+		<nav>
+			<h1>The Technological Carbon Footprint Calculator</h1>
+			<ul id="nav">
+				<li><a class="homered"href="Index.html">Home</a></li>
+				<li><a class="homeblack"href="What is Carbon Footprint.html">What is Carbon Footprint?</a></li>
+				<li><a class="homeblack"href="OurAim.html">Our Aim</a></li>
+
+		</nav>
+	</header>
+	<div class="fwimage1">
+	<div class="divider"></div>
+<form name= "myForm">
+<br>
+<p align="center" style = "font-family: 'ABeeZee', sans-serif;"><font size = "5"><br>
+<tr>
+<td align="center"><br>Number of Searches generted: </td>
+<td><input type="number" name="NumberofSearches"></td>
+</tr>
+<br>
+<br>
+<tr>
+<td align="center" style = "font-family: 'ABeeZee', sans-serif;"><font size = "5">Number of MegaBytes consumed: </td>
+<td><input type="number" name="MegaBytes"></td>
+</tr>
+<br><br>
+<tr>
+<td align="center">Number of Spams collected:</td>
+<td><input type="number" name="Spams"></td>
+</tr>
+<br><br>
+<tr>
+<td align="center">No of Emails transferred:</td>
+<td><input type="number" name="Emails"></td>
+</tr>
+<br><br>
+<tr>
+<td align="right">No of Emails transferred with Attachments:</td>
+<td><input type="number" name="Emails2"></td>
+</tr>
+
+
+<br><br>
+<tr>
+<td><input type="submit" value="Result" onclick="return(googlesearch());"/></td>
+</font></p><br>
+<p id="Result"></p>
+<p2 id="Result2"><p2>
+<p3 id="Result3"></p3>
+</form>
+</body>
+</html>
